@@ -22,8 +22,12 @@ const arrOfObjects = [
   }
 ];
 
-const hobbies = arrOfObjects.filter(available => {
-  return available.isAvailable === true;
-});
+const hobbies = arrOfObjects
+  .filter(available => {
+    return available.isAvailable === true;
+  })
+  .map(hobby => {
+    return hobby.hobbies;
+  });
 
 console.log(hobbies);
